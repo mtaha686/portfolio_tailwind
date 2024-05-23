@@ -1,10 +1,15 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import HeaderTailwind from "./components/common/HeaderTailwind";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/common/Header";
+import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testemonials";
+import Footer from "./components/common/Footor";
 function App() {
   return (
     <Router>
-      <HeaderTailwind />
+      <Header />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </Router>
   );
 }

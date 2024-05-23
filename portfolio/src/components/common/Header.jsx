@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 
-const HeaderTailwind = () => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -18,37 +18,43 @@ const HeaderTailwind = () => {
         <div className="hidden lg:flex space-x-4">
           <Link
             to="/"
-            className="hover:bg-white hover:text-black px-2 py-2 rounded"
+            className=" hover:text-customColor-orange px-2 py-2 rounded"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="hover:text-customColor-orange px-2 py-2 rounded"
           >
             About
           </Link>
           <Link
             to="/services"
-            className="hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="hover:text-customColor-orange px-2 py-2 rounded"
           >
             Services
           </Link>
           <Link
             to="/projects"
-            className="hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="hover:text-customColor-orange px-2 py-2 rounded"
           >
             Projects
           </Link>
           <Link
+            to="/testemonials"
+            className="hover:text-customColor-orange px-2 py-2 rounded"
+          >
+            Testemonials
+          </Link>
+          <Link
             to="/contact"
-            className="hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="hover:text-customColor-orange px-2 py-2 rounded"
           >
             Contact
           </Link>
           <a
             href="/path-to-your-cv.pdf"
-            className="bg-customColor-orange  text-white px-3 py-2  hover:bg-white hover:text-black rounded"
+            className="bg-customColor-orange  text-white px-3 py-2  hover:bg-customColor-dark hover:text-customColor-orange rounded"
             download
           >
             Download CV
@@ -92,42 +98,42 @@ const HeaderTailwind = () => {
         <div className="px-6 pb-4 space-y-2">
           <Link
             to="/"
-            className="block lg:hidden hover:bg-white hover:text-black focus:bg-white focus:text-black px-2 py-2 rounded"
+            className="block lg:hidden hover:text-customColor-orange px-2 py-2 rounded px-2 py-2 rounded"
             onClick={toggleDrawer}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block lg:hidden hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="block hover:text-customColor-orange px-2 py-2 rounded px-2 py-2 rounded"
             onClick={toggleDrawer}
           >
             About
           </Link>
           <Link
             to="/services"
-            className="block lg:hidden hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="block hover:text-customColor-orange px-2 py-2 rounded px-2 py-2 rounded"
             onClick={toggleDrawer}
           >
             Services
           </Link>
           <Link
             to="/projects"
-            className="block lg:hidden hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="block hover:text-customColor-orange px-2 py-2 rounded px-2 py-2 rounded"
             onClick={toggleDrawer}
           >
             Projects
           </Link>
           <Link
             to="/contact"
-            className="block lg:hidden hover:bg-white hover:text-black px-2 py-2 rounded"
+            className="block hover:text-customColor-orange px-2 py-2 rounded px-2 py-2 rounded"
             onClick={toggleDrawer}
           >
             Contact
           </Link>
           <a
             href="/path-to-your-cv.pdf"
-            className="block lg:hidden bg-customColor-orange text-white px-3 py-2 rounded hover:bg-customColor-dark hover:text-white px-2 py-2 rounded"
+            className="block lg:hidden bg-customColor-orange text-white px-3 py-2 hover:bg-customColor-dark hover:text-customColor-orange"
             download
             onClick={toggleDrawer}
           >
@@ -139,4 +145,4 @@ const HeaderTailwind = () => {
   );
 };
 
-export default HeaderTailwind;
+export default Header;
