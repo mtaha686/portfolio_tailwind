@@ -5,65 +5,123 @@
   font-family: helvetica, arial, sans-serif;
   list-style: none;
 }
+
 :root {
   --bg-color: #1e1e1e;
   --supporting-color: #fd6f00;
-
-  --main-bg-color: #2d2d7f; /*Dark Blue*/
+  --main-bg-color: #2d2d7f; /* Dark Blue */
   --text-color: #ffffff; /* White */
   --accent-orange: #ffae42; /* Orange */
   --accent-green: #5cb85c; /* Green */
   --accent-red: #d9534f; /* Red */
 }
 
-/* Homepage CSS */
 .main-home-container {
-  height: 87vh; /* Corrected typo: vh */
-  display: grid;
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 30px;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 80% 10%;
-  gap: 0px;
   background-color: var(--bg-color);
 }
 
-.grid-item {
-  display: flex;
+@media (min-width: 1024px) {
+  .main-home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
 }
 
 .introduction {
-  grid-column: 1 / 2;
-  grid-row: 0.8 / 2;
   display: flex;
   flex-direction: column;
-  padding: 20px 0px 20px 50px;
+  padding: 20px;
   font-size: 1.5em;
   color: white;
-  width: 90%;
+  text-align: center;
 }
 
-.introduction > h4 {
-  color: var(--supporting-color);
-  padding: 10px;
-  margin: 0;
-  border: none;
+@media (min-width: 1024px) {
+  .introduction {
+    text-align: left;
+    width: 60%;
+  }
 }
-.introduction > h1 {
-  color: var(--supporting-color);
-  padding: 0;
-  margin: 0;
-  border: none;
-}
+
 .introduction > p {
   font-size: 0.8em;
   color: white;
   text-align: justify;
 }
+
 .introduction > p > strong {
   color: var(--text-color);
   font-weight: bold;
   font-size: 2em;
 }
+
+.introduction p > span::after {
+  content: "";
+  animation: typing 5s steps(20) infinite;
+  color: var(--supporting-color);
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.introduction > p > button {
+  font-size: 0.8em;
+  padding: 10px;
+  width: 50%;
+  color: var(--supporting-color);
+  border: 1px solid var(--supporting-color);
+  margin: 0 auto;
+}
+
+.introduction > p > button:hover {
+  border: 1px solid white;
+  font-size: 0.9em;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.my-image {
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--supporting-color);
+  border-radius: 50%;
+  background-image: url("../images/myimg.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 640px) {
+  .my-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-image {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 @keyframes typing {
   0% {
     content: "A |";
@@ -86,48 +144,4 @@
   100% {
     content: "A Data Scientist |";
   }
-}
-
-.introduction p > span::after {
-  content: "";
-  animation: typing 5s steps(20) infinite;
-  color: var(--supporting-color);
-  font-size: 1.4em;
-  font-weight: bolder;
-}
-
-.introduction > p > button {
-  font-size: 0.8em;
-  padding: 10px;
-  width: 20%;
-  color: var(--supporting-color);
-  border: 1px solid var(--supporting-color);
-}
-.introduction > p > button:hover {
-  width: 20%;
-  padding: 10px;
-  border: 1px solid white;
-  font-size: 0.9em;
-}
-.image {
-  grid-row: 2 / span 2/3;
-  grid-column: 1 / span 1/3;
-}
-
-.image {
-  width: 90%;
-  height: 90%;
-  border: 5px solid var(--supporting-color);
-  border-radius: 50%;
-  background-image: url("../images/myimg.svg");
-  z-index: 1;
-  background-position: center;
-  background-size: 135%;
-  margin-left: -35px;
-}
-.my-image1 {
-  border: 4px solid var(--supporting-color);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
 }
