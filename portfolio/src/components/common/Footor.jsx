@@ -5,6 +5,8 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaGithub,
+  FaYoutube,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -33,28 +35,52 @@ const Footer = () => {
         </div>
         <div className="flex justify-center space-x-4">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/mtahamuhammadi/"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
             className="hover:text-customColor-orange"
           >
             <FaFacebookF />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/mtm_686"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
             className="hover:text-customColor-orange"
           >
             <FaTwitter />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/mtahamuhammadi/"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
             className="hover:text-customColor-orange"
           >
             <FaInstagram />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.youtube.com/@mtcodes"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
+            className="hover:text-customColor-orange"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mtaha686/"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
             className="hover:text-customColor-orange"
           >
             <FaLinkedinIn />
+          </a>
+          <a
+            href="https://github.com/muhammad686/"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security best practice
+            className="hover:text-customColor-orange"
+          >
+            <FaGithub />
           </a>
         </div>
         <div className="text-sm text-gray-400">

@@ -31,50 +31,6 @@ const Home = () => {
       <div className="grid-item image">
         <div className="my-image"></div>
       </div>
-      <div className="grid-item social-links">
-        <a
-          href="https://www.facebook.com/mtahamuhammadi/"
-          className="social-icon social-icon-fb"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
-        </a>
-        <a
-          href="https://www.instagram.com/mtahamuhammadi/"
-          className="social-icon social-icon-insta"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="www.linkedin.com/in/mtaha686"
-          className="social-icon social-icon-linkedin"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://github.com/muhammad686/"
-          className="social-icon social-icon-github"
-          aria-label="GitHub"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.youtube.com/@mtcodes"
-          className="social-icon social-icon-youtube"
-          aria-label="YouTube"
-        >
-          <FaYoutube />
-        </a>
-        <a
-          href="https://twitter.com/mtm_686"
-          className="social-icon social-icon-twitter"
-          aria-label="Twitter"
-        >
-          <FaTwitter />
-        </a>
-      </div>
     </div>
   );
 };
